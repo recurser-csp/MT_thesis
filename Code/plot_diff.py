@@ -4,7 +4,7 @@ h = open('../Data/10/random_mtf','r')
 my = open('../Data/10/suffix_mtf','r')
 my_pre = open('../Data/10/forward_150_500','r')
 import matplotlib.pyplot as plt
-points = 1000
+points = 600
 arr = []
 x = []
 y = []
@@ -70,7 +70,7 @@ plt.plot(x, y, linewidth = 0.5, color = 'black', label = 'Ideal')
 plt.plot(x1, y1, linewidth = 0.5, color = 'orange' ,label = 'My_Algo MTF Value')
 plt.plot(x2, y2, linewidth = 0.5, color = 'blue' ,label = 'Random MTF Value')
 plt.plot(xm, ym, linewidth = 0.5, color = 'green' ,label = 'Removing Leading Character')
-plt.plot(xp, yp, linewidth = 0.5, color = 'red' ,label = 'Brute Forcing for Removing single Character')
+plt.plot(xp, yp, linewidth = 0.5, color = 'red' ,label = 'Brute Forcing for Adding single Character')
 
 # naming the x axis 
 plt.xlabel('Length of String')
