@@ -42,43 +42,24 @@ for i in range(len(character)):
 	sigma = character[i][0]
 	character[i].pop(0)
 	character[i].pop(0)
-
+# print(sigma)
 
 # character = [[1,2,3,4,5,6,7,8,9,0]]
 
-for i in range(500):
+for i in range(700):
 	t = character[-1].copy()
 	max_mtf = 0
 	max_mtf_str = t
-	for j in range(len(t)-1):
-		for k in range(1,sigma+1):
-			x = t.copy()
-			x.insert(j,k)
-			# print(x)
-			cur_mtf = cal_mtf(sigma,x)
-			if cur_mtf>max_mtf:
-				max_mtf_str = x
-				max_mtf = cur_mtf
+	for k in range(1,sigma+1):
+		x = t.copy()
+		x.insert(0,k)
+		# print(x)
+		cur_mtf = cal_mtf(sigma,x)
+		if cur_mtf>=max_mtf:
+			max_mtf_str = x
+			max_mtf = cur_mtf
 
 	character.append(max_mtf_str)
 	# print(character)
 	print(max_mtf,len(max_mtf_str))
 
-
-
-# for i in range(len(character)):
-# 	character[i] = bwt(character[i])
-# 	# print(character[i])
-# 	temp = 0    # initial MTF value
-# 	chars = []
-# 	for m in range(sigma+1):
-# 		chars.append(m)
-# 	for k in range(len(character[i])):
-# 		for j in range(len(chars)):
-# 			if chars[j] == character[i][k]:
-# 				temp = temp+1+j
-# 				break
-# 		t_1 = chars.pop(j)
-# 		chars.insert(0,t_1)     #move_to_front
-# 	# print(character[i])
-# 	print(temp,len(character[i])-1)

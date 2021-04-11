@@ -95,7 +95,13 @@ int main(int argc, char *argv[])
                     }
                 }
                 else /*i==length and some char repeat more than some other */
-                {
+                { 
+                    int t;
+                    t = character[length];
+                    character[length] = character[length-1];
+                    character[length-1] = t;
+
+                    /*temp
                     z= initial_count[temp2+1];
                     initial_count[temp2+1]=z+1;
                     character[i]=z;
@@ -122,7 +128,7 @@ int main(int argc, char *argv[])
                             }
 
                         }
-                    }
+                    }Temp*/
                 }
             }
         }
@@ -203,7 +209,8 @@ int main(int argc, char *argv[])
         }
         if(flag_1)continue;
         // cout<<"success\n";
-        cout<<"character Array:\t";
+        // cout<<"character Array:\t";
+        cout<<temp2<<endl;
         cout<<length<<" ";
               for(i=1;i<=length;i++)
             cout<<character[i]<<" ";
@@ -256,7 +263,7 @@ int main(int argc, char *argv[])
         
         }
         cout<<sigma<<","<<length<<",";
-                      for(i=1;i<=length;i++)
+                      for(i=1;i<=length+1;i++)
             cout<<ibwt[i]<<",";
         cout<<endl;
         // cout<<length<<" ";
