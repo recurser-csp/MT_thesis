@@ -13,7 +13,7 @@ def bwt(s):
 		st.append(A_[i][-1])
 	return st
 
-f = open('../Data/10/ext_2k','r')
+f = open('../Data/10/dataset_5.txt','r')
 character = []
 for i in f:
 	character.append(i)
@@ -23,10 +23,11 @@ for i in range(len(character)):
 	character[i].pop(-1)
 	for j in range(len(character[i])):
 		character[i][j] = int(character[i][j])
-	sigma = character[i][0]
-	character[i].pop(0)
-	character[i].pop(0)
-# sigma = 10
+	# sigma = character[i][0] 
+	# character[i].pop(0)
+	# character[i].pop(0)
+sigma = 4
+mx_mtf =0
 for i in range(len(character)):
 	character[i] = bwt(character[i])
 	# print(character[i])
@@ -42,4 +43,6 @@ for i in range(len(character)):
 		t_1 = chars.pop(j)
 		chars.insert(0,t_1)
 	# print(character[i])
+	mx_mtf = max(mx_mtf,temp)
 	print(temp,len(character[i])-1)
+print(mx_mtf)

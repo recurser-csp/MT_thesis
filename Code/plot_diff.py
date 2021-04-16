@@ -1,7 +1,7 @@
 f = open('../Data/10/ub_mtf','r')
 g = open('../Data/10/algo','r')
 h = open('../Data/10/random_mtf','r')
-my = open('../Data/10/forward_150_end','r')
+my = open('../Data/10/suffix_mtf','r')
 my_pre = open('../Data/10/ext_mtf_2k','r')
 import matplotlib.pyplot as plt
 points = 2000
@@ -54,8 +54,8 @@ for i in range(len(arr)):
 	yp.append(int(arr[i][0]))
 	xp.append(int(arr[i][1]))
 # print(arr)
-# xm = xm[::-1]
-# ym = ym[::-1]
+xm = xm[::-1]
+ym = ym[::-1]
 x = x[:points]
 y = y[:points]
 x1 = x1[:points]

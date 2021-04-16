@@ -31,7 +31,7 @@ def recursive_algo(set, prefix, n, k):
 
 stringsarr = []
 char_list = ['1','2','3','4']
-string_length = 50
+string_length = 5
 generae_algo(char_list,string_length)
 with open('../Data/10/dataset_'+str(string_length)+'.txt','w') as file:
 	for item in stringsarr:

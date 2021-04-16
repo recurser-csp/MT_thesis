@@ -31,7 +31,7 @@ int main(int argc, char *argv[])
             if(temp1>=1)
             {
                 initial_count[i]=2+(i-1)*c1+temp1;
-                count[i]=2+(i-1)*c1+temp1; 
+                count[i]=2+(i-1)*c1+temp1;
                 temp1++;
             }
             else
@@ -293,7 +293,10 @@ int main(int argc, char *argv[])
 
         }
         if(flag_1)continue;
-
+        cout<<sigma<<","<<length+1<<",";
+                      for(i=1;i<=length+1;i++)
+            cout<<next_char[i]<<",";
+        cout<<endl;
 
 
        // cout<<length<<" Next string ";
@@ -333,10 +336,10 @@ int main(int argc, char *argv[])
             ibwt[i] = j-1;
         
         }
-        cout<<sigma<<","<<length+1<<",";
-                      for(i=1;i<=length+1;i++)
-            cout<<ibwt[i]<<",";
-        cout<<endl;
+        // cout<<sigma<<","<<length+1<<",";
+        //               for(i=1;i<=length+1;i++)
+        //     cout<<ibwt[i]<<",";
+        // cout<<endl;
         // cout<<length<<" ";
         //       for(i=1;i<length;i++)
         //     { 

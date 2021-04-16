@@ -46,18 +46,19 @@ for i in range(len(character)):
 
 # character = [[1,2,3,4,5,6,7,8,9,0]]
 
-for i in range(700):
+for i in range(50):
 	t = character[-1].copy()
 	max_mtf = 0
 	max_mtf_str = t
 	for k in range(1,sigma+1):
-		x = t.copy()
-		x.insert(0,k)
-		# print(x)
-		cur_mtf = cal_mtf(sigma,x)
-		if cur_mtf>=max_mtf:
-			max_mtf_str = x
-			max_mtf = cur_mtf
+		for l in range(len(t)-1):
+			x = t.copy()
+			x.insert(l,k)
+			# print(x)
+			cur_mtf = cal_mtf(sigma,x)
+			if cur_mtf>=max_mtf:
+				max_mtf_str = x
+				max_mtf = cur_mtf
 
 	character.append(max_mtf_str)
 	# print(character)

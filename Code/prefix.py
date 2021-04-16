@@ -29,7 +29,7 @@ for i in range(len(character)):
 # character = [[1,2,3,4,5,6,7,8,9]]
 for i in range(1950):
 	t = character[-1].copy()
-	t.pop(0)
+	t.pop(-2)
 	character.append(t)
 # print(character)
 

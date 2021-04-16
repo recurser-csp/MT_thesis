@@ -2,7 +2,7 @@ import subprocess
 import os
 import random
 
-f = open('../Data/ideal_seq.txt','r')
+f = open('../Data/10/lsc','r')
 
 character = []
 for i in f:
