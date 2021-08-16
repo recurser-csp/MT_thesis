@@ -13,7 +13,7 @@ def bwt(s):
 		st.append(A_[i][-1])
 	return st
 
-f = open('../Data/10/ext_2k','r')
+f = open('../Data/26/1k_ub','r')
 character = []
 for i in f:
 	character.append(i)
@@ -26,10 +26,11 @@ for i in range(len(character)):
 	sigma = character[i][0]
 	character[i].pop(0)
 	character[i].pop(0)
-# sigma = 10
+# print(sigma)
 for i in range(len(character)):
-	character[i] = bwt(character[i])
-	# print(character[i])
+	# character[i] = character[i][:-1]+character[i]
+	# character[i] = bwt(character[i])
+	# print(character[i],len(character[i]))
 	temp = 0
 	chars = []
 	for m in range(sigma+1):
@@ -42,4 +43,4 @@ for i in range(len(character)):
 		t_1 = chars.pop(j)
 		chars.insert(0,t_1)
 	# print(character[i])
-	print(temp,len(character[i])-1)
+	print(temp,len(character[i]))

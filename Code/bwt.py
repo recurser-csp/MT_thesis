@@ -14,7 +14,7 @@ def bwt(s):
 		st+=A_[i][-1]
 	return st
 
-S = '32144'
+S = 'abaccbc'
 S_ = bwt(S)
 print("\nBWT("+S+"$) : "+S_)
 # c = "423$143"

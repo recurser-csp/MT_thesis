@@ -28,24 +28,24 @@ for i in range(len(arr)):
 x = x[:points]
 y = y[:points]
 
-fig,ax = plt.subplots(2	)
-ax[0].plot(x, y,linewidth = 0.5, color = 'black', label = 'Maximum MTF possible for any string')
-ax[0].plot(yp, xp,linewidth = 1.0, color = 'orange' ,label = 'MTF value of the string given by algorithm')
-ax[1].plot(yp,swaps,linewidth = 0.5, color = 'green' ,label = 'Number of swaps'	)
+# fig,ax = plt.subplots(2	)
+plt.plot(x, y,linewidth = 0.5, color = 'blue', label = 'Maximum MTF possible for any string')
+plt.plot(yp, xp,linewidth = 1.0, color = 'orange' ,label = 'MTF value of the string given by algorithm')
+# ax[1].plot(yp,swaps,linewidth = 0.5, color = 'green' ,label = 'Number of swaps'	)
 # plt.plot(x, y, linewidth = 0.5, color = 'black', label = 'Ideal')
 # plt.plot(yp, xp, linewidth = 0.5, color = 'red' ,label = '$ insertion')
 # plt.plot(yp,swaps, linewidth = 0.5, color = 'green' ,label = 'Number of swaps')
 
 
-ax[0].set_xlabel('Length of String')
-ax[0].set_ylabel('MTF Value')
-ax[0].legend(loc = 'upper left')
-ax[1].set_ylabel('Number of Swaps')
-ax[1].set_xlabel('Length of String')
+plt.xlabel('Length of String')
+plt.ylabel('MTF Value')
+plt.legend(loc = 'upper left')
+# ax[1].set_ylabel('Number of Swaps')
+# ax[1].set_xlabel('Length of String')
 
   
 # # giving a title to my graph 
-ax[0].set_title('Variation on MTF for Σ = 27')
+plt.title('Variation on MTF for Σ = 7')
 # # function to show the plot 
 plt.show()
 beta = 0.0

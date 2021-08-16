@@ -263,17 +263,10 @@ int main(int argc, char *argv[])
         
         }
         cout<<sigma<<","<<length<<",";
-                      for(i=1;i<=length+1;i++)
+                      for(i=1;i<=length;i++)
             cout<<ibwt[i]<<",";
         cout<<endl;
-        // cout<<length<<" ";
-        //       for(i=1;i<length;i++)
-        //     { 
-        //         printf("%c",ibwt[i]+96 );
 
-        //     }
-        //     printf("$" );
-        // cout<<endl;
 
     }
 }
